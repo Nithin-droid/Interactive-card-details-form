@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Interactive card details form</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <aside class="aside_element">
+        <div class="cards">
+          <div class="front">
+            <img src="./images/bg-card-front.png" alt="" class="card_img" />
+            <img
+              src="./images/card-logo.svg"
+              alt="white-dots"
+              class="card_logo"
+            />
+            <p class="card_num">0000 0000 0000 0000</p>
+            <div class="details">
+              <p class="name element-font">Jane Appleseed</p>
+              <div class="exp_date_card">
+                <span class="mm element-font">00</span>
+                <span class="element-font">/</span>
+                <span class="yy element-font">00</span>
+              </div>
+            </div>
+          </div>
+          <div class="back">
+            <img src="./images/bg-card-back.png" alt="" class="card_img" />
+            <p class="cvv">000</p>
+          </div>
+        </div>
+      </aside>
+
+      <section class="card-details">
+        <div class="form_div">
+          <form class="details_form">
+            <div class="element-group">
+              <label for="name">Cardholder Name</label>
+              <input
+                type="text"
+                name="Cardholdername"
+                id="name"
+                placeholder="e.g. Jane Appleseed"
+                class="cardname input_widths"
+              />
+              <p class="error_msg hidden cname">Can't be blank</p>
+            </div>
+
+            <div class="element-group">
+              <label for="number">Card Number</label>
+              <input
+                type="text"
+                name="Cardnumber"
+                id="number"
+                placeholder="e.g. 1234 5678 9123 0000"
+                class="classnumber input_widths"
+                maxlength="19"
+              />
+              <p class="error_msg hidden cnum">Can't be blank</p>
+            </div>
+
+            <div class="date_cvc">
+              <div class="exp_date">
+                <label for="MM">Exp. Date (MM/YY)</label>
+
+                <div class="MM_YY">
+                  <input
+                    type="number"
+                    name="month"
+                    id="month"
+                    required
+                    placeholder="MM"
+                    class="month"
+                  />
+                  <input
+                    type="number"
+                    name="year"
+                    id="year"
+                    required
+                    placeholder="YY"
+                    class="year"
+                  />
+                </div>
+              </div>
+              <div class="cvc">
+                <label for="CVC">CVC</label>
+                <input
+                  type="number"
+                  name="CVC"
+                  id="CVC"
+                  maxlength="3"
+                  minlength="3"
+                  required
+                  placeholder="e.g. 123"
+                  class="card_cvc"
+                />
+              </div>
+            </div>
+            <div class="mm_yy_error">
+              <p class="error_msg hidden cdate">Can't be blank</p>
+              <p class="error_msg hidden ccvc">Can't be blank</p>
+            </div>
+            <button class="confirm_btn input_widths">Confirm</button>
+          </form>
+
+          <div class="thank-you hidden">
+            <img src="./images/icon-complete.svg" alt="" />
+            <p class="thanks">THANK YOU!</p>
+            <p class="info-text">We've added your card details</p>
+            <button>Continue</button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="https://github.com/Nithin-droid">Nithin</a>.
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>
